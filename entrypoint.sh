@@ -6,7 +6,7 @@ if [ -z "$1" ]; then
 fi
 
 JELLYFIN_BUILD_OPTION="${2:-Jellyfin}";
-TAG_URL="${3:-https://github.com/MADDOG13524/jellyfin-tizen-builds/releases/latest}";
+TAG_URL="${3:-https://github.com/maddog13524/jellyfin-tizen-builds/releases/latest}";
 
 if [ -z "$2" ]; then
     echo "Build option not provided, using default one: $JELLYFIN_BUILD_OPTION";
@@ -32,7 +32,7 @@ else
 	# Check if TAG is not empty
 	if [ -z "$TAG" ]; then
 		echo "Error: Could not extract the tag from the provided URL $TAG_URL"
-		echo "Please provide a URL to the full release, for example: https://github.com/MADDOG13524/jellyfin-tizen-builds/releases/tag/2024-11-24-0431"
+		echo "Please provide a URL to the full release, for example: https://github.com/maddog13524/jellyfin-tizen-builds/releases/tag/2024-11-24-0431"
   		echo "Otherwise, don't provide a URL and the latest version will be installed."
 		exit 1
 	fi
@@ -49,7 +49,7 @@ else
 	fi
 fi	
 
-DOWNLOAD_URL=$(echo https://github.com/MADDOG13524/jellyfin-tizen-builds/releases/download/${TAG}/${JELLYFIN_BUILD_OPTION}.wgt);
+DOWNLOAD_URL=$(echo https://github.com/maddog13524/jellyfin-tizen-builds/releases/download/${TAG}/${JELLYFIN_BUILD_OPTION}.wgt);
 
 echo ""
 echo ""
